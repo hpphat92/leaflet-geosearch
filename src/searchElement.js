@@ -20,7 +20,9 @@ export default class SearchElement {
     this.handleSubmit = handleSubmit;
   }
 
-  onFocus() {
+  onFocus(e) {
+    e.preventDefault();
+    e.stopPropagation();
     addClassName(this.elements.form, 'active');
   }
 

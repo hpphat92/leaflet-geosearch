@@ -133,6 +133,7 @@ const Control = {
 
   onClick(event) {
     event.preventDefault();
+    event.stopPropagation();
 
     const { container, input } = this.searchElement.elements;
 
